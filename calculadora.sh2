@@ -1,0 +1,30 @@
+#!/bin/bash
+echo "Escolha a operação: "
+echo "1. Soma"
+echo "2. Subtração"
+echo "3. Multiplicação"
+echo "4. Divisão"
+read operacao
+
+echo "Digite o primeiro número: "
+read num1
+
+echo "Digite o segundo número: "
+read num2
+
+case $operacao in
+  1) result=$((num1 + num2))
+  echo "Resultado: $result"
+  ;;
+  2) result=$((num1 - num2))
+  echo "Resultado: $result"
+  ;;
+  3) result=$((num1 * num2))
+  echo "Resultado: $result"
+  ;;
+  4) result=$((num1 / num2))
+  echo "Resultado: $result"
+  ;;
+  *) echo "Operação inválida!"
+  ;;
+esac
